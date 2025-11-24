@@ -1,0 +1,47 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f0e8; /* Мягкий, теплый фон */
+    color: #444;
+    text-align: center;
+    padding-top: 50px;
+    background-image: url('ссылка_на_изображение_котика.png'); /* Добавьте свое изображение! */
+    background-size: 150px;
+    background-repeat: repeat-y;
+}
+
+#player-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.controls button {
+    background-color: #ff99aa; /* Кошачьи лапки */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 50px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #ff7788;
+}
+
+/* Стилизация плейлиста */
+#playlist li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+#playlist li:hover {
+    background-color: #fff0f5; /* Нежно-розовый при наведении */
+}
