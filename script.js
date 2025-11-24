@@ -3,7 +3,7 @@ const playlist = [
     { title: "BUTCHER VANITY (RUS)", file: "music/Zephyr - BUTCHER VANITY (на русском).mp3" },
     {title: "BUTCHER VANITY", file: "music/Vane Lily - Butcher Vanity.mp3" },
     { title: "Compass (RUS)", file: "music/riguruma - Compass.mp3" },
-    { title: "Gone Angels", file: "music/Gone Angels.mp3" },
+    { title: "Gone Angels (RUS)", file: "music/Gone Angels.mp3" },
     { title: "Светает", file: "music/Субтитры - Светает.mp3" },
     // Добавьте все ваши треки здесь
 ];
@@ -65,3 +65,4 @@ playlist.forEach((track, index) => {
     });
     playlistEl.appendChild(li);
 });
+
