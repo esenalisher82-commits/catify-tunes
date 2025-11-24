@@ -1,0 +1,21 @@
+{
+    "name": "Плеер для моего Зайчика :3",
+    "short_name": "Музычка",
+    "description": "Персональный музыкальный плеер для моего любимого Зайчика 🐰💕",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#f7f0e8",
+    "theme_color": "#ff99aa",
+    "icons": [
+        {
+            "src": "/images/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
