@@ -1,21 +1,85 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f7f0e8; /* Мягкий, теплый фон */
+    background-color: #f7f0e8; /* Теплый бежевый фон */
     color: #444;
     text-align: center;
-    padding-top: 50px;
-    background-image: url('ссылка_на_изображение_котика.png'); /* Добавьте свое изображение! */
-    background-size: 150px;
-    background-repeat: repeat-y;
+    padding: 0; /* Убираем отступ, чтобы фурряшки могли встать по краям */
+    margin: 0;
+    min-height: 100vh; /* Минимальная высота на весь экран */
+    display: flex; /* Используем flexbox для центрирования контента */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали, если контента мало */
+    overflow-x: hidden; /* Предотвращаем горизонтальный скролл */
+    position: relative; /* Для позиционирования фурряшек относительно body */
 }
 
-#player-container {
+/* Стили для основного контейнера, который будет держать контент и фурряшек */
+.main-wrapper {
+    width: 100%; /* Занимает всю ширину */
+    max-width: 1400px; /* Ограничиваем общую ширину, чтобы фурряшки не были слишком далеко */
+    display: flex;
+    justify-content: center; /* Центрируем content-wrapper */
+    align-items: flex-start; /* Выравнивание сверху */
+    position: relative;
+    padding: 20px 0; /* Отступ сверху/снизу */
+}
+
+/* Контейнер для всего вашего основного контента (плеер, плейлист) */
+.content-wrapper {
+    flex-shrink: 0; /* Не сжимается */
+    width: 100%;
+    max-width: 700px; /* Максимальная ширина основного контента */
+    margin: 0 20px; /* Отступы от фурряшек */
     background: #ffffff;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    max-width: 600px;
-    margin: 0 auto 40px;
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+/* Стили для спрайтов фурряшек */
+.furry-sprite {
+    position: absolute; /* Абсолютное позиционирование относительно main-wrapper */
+    top: 50px; /* Или 0, в зависимости от желаемой высоты */
+    height: auto; /* Сохраняем пропорции */
+    max-height: 80vh; /* Максимальная высота от окна просмотра */
+    z-index: 10; /* Убедимся, что они поверх фона, но под контентом */
+}
+
+.furry-sprite.left {
+    left: 140px; /* Отступ слева */
+    transform: translateX(-50%); /* Центрируем спрайт относительно левого края main-wrapper */
+    width: 550px;
+    height: auto;
+}
+
+.furry-sprite.right {
+    right: 140px; /* Отступ справа */
+    transform: translateX(50%); /* Центрируем спрайт относительно правого края main-wrapper */
+}
+
+/* Медиа-запросы для адаптивности: скрываем фурряшек на маленьких экранах */
+@media (max-width: 900px) {
+    .furry-sprite {
+        display: none; /* Скрываем фурряшек на маленьких экранах */
+    }
+    .content-wrapper {
+        margin: 0 auto; /* Центрируем контент без отступов */
+    }
+}
+
+/* Оставляем остальные стили без изменений */
+header h1 {
+    font-size: 2.5em;
+    color: #ff69b4; /* Яркий цвет для заголовка */
+    margin-bottom: 30px;
+}
+
+#player-container {
+    background: #ffffff; /* Убрали тень и фон отсюда, так как теперь это в content-wrapper */
+    padding: 0; /* Убираем padding отсюда */
+    box-shadow: none; /* Убираем тень */
+    margin-bottom: 40px;
 }
 
 .controls button {
@@ -34,9 +98,13 @@ body {
     background-color: #ff7788;
 }
 
-/* Стилизация плейлиста */
-#playlist li {
+#playlist {
+    padding: 0;
     list-style: none;
+    margin-top: 20px;
+}
+
+#playlist li {
     padding: 10px;
     cursor: pointer;
     border-bottom: 1px solid #eee;
