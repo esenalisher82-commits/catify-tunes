@@ -2,28 +2,34 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>🐱 Catify - Твоя Музыка</title>
+    <title>Твоя музычка</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/images/icon-192.png">
 </head>
 <body>
-    <header>
-        <h1>🎵 Твой Персональный Meowbox 🐾</h1>
-    </header>
-
-    <div id="player-container">
-        <h2 id="track-title">Загрузка...</h2>
-        <audio id="audio-player" src="" controls></audio>
+    <div class="main-wrapper">
+        <img src="images/Yixi.png" alt="Фурряшка слева" class="furry-sprite left">
         
-        <div class="controls">
-            <button id="prev-btn">⏮️</button>
-            <button id="play-pause-btn">▶️</button>
-            <button id="next-btn">⏭️</button>
-        </div>
-    </div>
+        <div class="content-wrapper">
+            <header>
+                <h1>🎵 Лучше чем Спотифай 🐾</h1>
+            </header>
 
-    <ul id="playlist">
-        </ul>
-    
-    <script src="script.js"></script>
+            <div id="player-container">
+                <h2 id="track-title">Загрузка...</h2>
+                <audio id="audio-player" src="" controls></audio>
+                
+                <div class="controls">
+                    <button id="prev-btn">⏮️</button>
+                    <button id="play-pause-btn">▶️</button>
+                    <button id="next-btn">⏭️</button>
+                </div>
+            </div>
+
+            <ul id="playlist">
+                </ul>
+        </div> <img src="images/von_lycaon.png" alt="Фурряшка справа" class="furry-sprite right">
+    </div> <script src="script.js"></script>
 </body>
 </html>
