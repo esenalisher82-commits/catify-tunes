@@ -1,8 +1,9 @@
 // 1. Создайте список ваших треков. Имена должны совпадать с файлами в папке /music/
 const playlist = [
-    { title: "BUTCHER VANITY", file: "music/Zephyr - BUTCHER VANITY (на русском).mp3" },
-    { title: "Compass", file: "music/Mili - Compass(RUS cover by Marie Bibika).mp3" },
-    { title: "Gone Angels", file: "music/Library of Ruina OST.mp3" },
+    { title: "BUTCHER VANITY (RUS)", file: "music/Zephyr - BUTCHER VANITY (на русском).mp3" },
+    {title: "BUTCHER VANITY", file: "music/Vane Lily - Butcher Vanity.mp3" },
+    { title: "Compass (RUS)", file: "music/riguruma - Compass.mp3" },
+    { title: "Gone Angels", file: "music/Gone Angels.mp3" },
     { title: "Светает", file: "music/Субтитры - Светает.mp3" },
     // Добавьте все ваши треки здесь
 ];
